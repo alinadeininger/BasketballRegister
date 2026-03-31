@@ -138,8 +138,7 @@ public class MyStepdefs {
     }
 
     public static void click(WebDriver driver, By by) {
-        (new WebDriverWait(driver, Duration.ofSeconds(10))).until(ExpectedConditions.elementToBeClickable(by));
-        driver.findElement(by).click();
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(by)).click();
     }
 
     @After
