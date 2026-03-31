@@ -1,8 +1,5 @@
 Feature: Register new user
 
-  #Background: Set up website
-   # Given Opening the website using <browser> as browser
-
   Scenario Outline: Register user successfully
     Given I have <browser> as a browser
     Given I enter a date of birth <day> <month> <year>
@@ -14,7 +11,7 @@ Feature: Register new user
     And I assure that I am an adult
     And I agree on Code of Ethics and Conduct
     When I submit the form
-    Then I register successfully
+    Then I registered successfully
 
 
 
@@ -22,7 +19,7 @@ Feature: Register new user
       | browser | day | month | year | first  | last      | email             | password     |
       | chrome  | 12  | 12    | 2000 | Alina  | Deininger | aldei@gmail.com   | pannkakor123 |
       | edge    | 24  | 7     | 1987 | Martin | Svensson  | masve@outlook.com | hejsan78     |
-      | firefox | 8   | 1     | 1996 | Elsa   | Möller    | elmo@yahoo.com    | frozen_5     |
+      | firefox | 8   | 1     | 1996 | Elsa   | Moller    | elmo@yahoo.com    | frozen_5     |
 
 
   Scenario: Missing last name
@@ -42,7 +39,7 @@ Feature: Register new user
     Given I have firefox as a browser
     Given I enter a date of birth 18 3 1972
     And Enter first name Magnus
-    And Enter last name Nordström
+    And Enter last name Nordstrom
     And Enter email nord72@gmail.com plus matching confirmation
     And Add password hej
     And Enter wrong password confirmation hejsan
